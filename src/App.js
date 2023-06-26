@@ -1,21 +1,29 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AppProvider } from './context/AppContext';
-import CartValue from './components/CartValue';
+import  SpentSoFar from './components/SpentSoFar.js';
+import  Location from './components/Location.js';
+import Tbudget from './components/Budget.js';
 import ExpenseList from './components/ExpenseList';
 import ItemSelected from './components/ItemSelected';
-import Location from './components/Location';
+import Remaining from './components/Remaining';
 const App = () => {
     return (
         <AppProvider>
             <div className='container'>
-                <h1 className='mt-3'>Shopping App</h1>
+                <h1 className='mt-3'>Company's Budget Allocation</h1>
                 <div className='row mt-3'> 
                     <div className='col-sm'>
-                        <CartValue />
+                        <Tbudget />
                     </div>
                     <div className='col-sm'>
-                        <Location />
+                        <Remaining />
+                    </div>
+                    <div className='col-sm'>
+                        <SpentSoFar />
+                    </div>
+                    <div className='col-sm'>
+                        <Location/>
                     </div>
                 </div>
                 <h3 className='mt-3'>Shopping Cart</h3>
